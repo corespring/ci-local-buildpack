@@ -113,7 +113,8 @@ fi
 
 echo "copy over the credentials file..."
 mkdir -p "$SBT_USER_HOME_ABSOLUTE/.ivy2"
-cp "~/.ivy2/.credentials" "$SBT_USER_HOME_ABSOLUTE/.ivy2/.credentials"
+echo "home folder: $HOME"
+cp "$HOME/.ivy2/.credentials" "$SBT_USER_HOME_ABSOLUTE/.ivy2/.credentials"
 
 # copy in heroku sbt plugin
 HEROKU_PLUGIN="HerokuPlugin.scala"
