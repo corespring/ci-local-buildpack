@@ -19,6 +19,8 @@ curl --silent --location http://heroku-jvm-common.s3.amazonaws.com/jvm-buildpack
 #create the cache dir if it doesn't exist
 mkdir -p $CACHE_DIR
 
+echo "CI Local Buildpack -------------------------------"
+
 # create default system.properties
 if [ ! -f ${BUILD_DIR}/system.properties ]; then
   echo "java.runtime.version=1.6" > ${BUILD_DIR}/system.properties
