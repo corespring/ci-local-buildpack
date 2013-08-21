@@ -31,8 +31,8 @@ javaVersion=$(detect_java_version ${BUILD_DIR})
 echo -n "-----> Installing OpenJDK ${javaVersion}..."
 install_java ${BUILD_DIR} ${javaVersion}
 jdk_overlay ${BUILD_DIR}
-chmod +x "$BUILD_DIR/bin/java"
-chmod +x "$BUILD_DIR/bin/util"
+chmod a+x "$BUILD_DIR/bin/java"
+chmod a+x "$BUILD_DIR/bin/util"
 echo "done"
 
 # home directory from perspective of SBT; we rename
