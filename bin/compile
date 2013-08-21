@@ -33,6 +33,13 @@ install_java ${BUILD_DIR} ${javaVersion}
 jdk_overlay ${BUILD_DIR}
 chmod a+x "$BUILD_DIR/bin/java"
 chmod a+x "$BUILD_DIR/bin/util"
+echo "path::::"
+
+$PATH
+export PATH=$(echo $PATH | sed 's_//_/_')
+echo "new path::: "
+
+$PATH
 echo "done"
 
 # home directory from perspective of SBT; we rename
