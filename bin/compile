@@ -34,7 +34,6 @@ jdk_overlay ${BUILD_DIR}
 chmod a+x "$BUILD_DIR/bin/java"
 chmod a+x "$BUILD_DIR/bin/util"
 export PATH=$(echo $PATH | sed 's_//_/_')
-$PATH
 echo "path: $PATH"
 echo "done"
 
