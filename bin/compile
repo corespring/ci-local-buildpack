@@ -113,11 +113,6 @@ else
   error "Error, SBT version $SBT_VERSION not supported"
 fi
 
-echo "copy over the credentials file..."
-mkdir -p "$SBT_USER_HOME_ABSOLUTE/.ivy2"
-echo "home folder: $HOME"
-env
-
 if [ -n "$credentials_file_path" ]; then
   echo "copying in the credentials file here $credentials_file_path"
   cp "$credentials_file_path" "$SBT_USER_HOME_ABSOLUTE/.ivy2/.credentials"
@@ -127,6 +122,10 @@ fi
 HEROKU_PLUGIN="HerokuPlugin.scala"
 mkdir -p "$SBT_USER_HOME/.sbt/plugins"
 cp $OPT_DIR/$HEROKU_PLUGIN $SBT_USER_HOME/.sbt/plugins/$HEROKU_PLUGIN
+
+echo "tests::"
+which java
+echo $PATH
 
 # build app
 echo "-----> Running: sbt $SBT_TASKS"
