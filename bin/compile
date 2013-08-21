@@ -115,6 +115,7 @@ fi
 
 if [ -n "$credentials_file_path" ]; then
   echo "copying in the credentials file here $credentials_file_path"
+  mkdir -p "$SBT_USER_HOME_ABSOLUTE/.ivy2/"
   cp "$credentials_file_path" "$SBT_USER_HOME_ABSOLUTE/.ivy2/.credentials"
 fi
 
